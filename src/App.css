@@ -1,10 +1,12 @@
+
 body {
-  text-align: center
+  text-align: center;
+  
   }
   
   img {
-    width: 700px;
-    height: 700px;
+    /* width: 700px;
+    height: 700px; */
   }
   
   .card {
@@ -20,16 +22,24 @@ body {
     clear: both;
   }
   
+  .p{
+    font-size: 30px;
+  }
+
+  .sa{
+   font-size: 60px;
+   padding:70px;
+   text-align: center;
+   color: rgb(90, 88, 88);
+
+  }
   
-  @media (max-width:900px){
-  .card {
-    padding: 3px;
+
+  .h2{
+    color: rgb(90, 88, 88);
   }
-  }
-  
-  @media (max-width:850px){
-    img {
-    width: 100px;
-    height: 100px;
-  }
+
+  .navbar{
+    
+    justify-content: between;
   }

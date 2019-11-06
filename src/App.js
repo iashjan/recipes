@@ -1,45 +1,18 @@
-import React, { Component } from 'react'
-import Axios from 'axios'
-import recipes from './component/Recipes';
-import about from './component/About';
- import {Route, BrowserRouter, Switch, Link, NavLink} from 'react-router-dom';
-import Recipes from './component/Recipes';
- import './App.css';
- import home from './component/Home'
- import {Navbar, Nav} from 'react-bootstrap'
+import React, { Component } from 'react';
+import Axios from 'axios';
 
+ import {Route, BrowserRouter, Switch, Link, NavLink} from 'react-router-dom';
+ import './App.css';
+ import {Navbar, Nav} from 'react-bootstrap';
+import About from './component/About'
+ import Home from './component/Home'
+import Recipes from './component/Recipes';
+import Singup from './component/Signup';
 //   import  serviceWorker from './serviceWorker';
 
 
 
 class App extends Component {
-
-  constructor(props) {
-    super(props)
-    this.state = {
-      recipes: null
-    }
-  }
-
-  componentDidMount() {
-    const axios = require("axios");
-
-    axios({
-      "method": "GET",
-      "url": "https://api.edamam.com/search?q=chicken&app_id=f7ff37c7&app_key=f8741034b92721cc3e6fad606a197d26&from=0&to=100&calories=591-722&health=alcohol-free",
-     
-      
-    })
-      .then((res) => {
-        console.log(res)
-        const recipes = res; 
-             this.setState({ recipes});
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-  }
-
 
 
   render() {
@@ -47,33 +20,32 @@ class App extends Component {
     
       <div className="App">
          <BrowserRouter>
+         <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"> R E C I P E S</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="recipes">Recipes</a>
+      <a class="nav-item nav-link" href="about">About</a>
+      <a class="nav-item nav-link" href="sign">Sign up</a>
 
-
-      <NavLink to="/home">Home</NavLink>
-         <NavLink to="/recipes">Recipes</NavLink>
-         <NavLink to="/about">About</NavLink>
-         {/* <NavLink to="/contact">Contact</NavLink>  */}
-         
-         
-        
-        { this.state.recipes != null && this.state.recipes.data.hits.map((item, index)=>{
-          
-              return  <Recipes recipes={item}  />
-              
-        })
-      }
+    </div>
+  </div>
+</nav>
+         {/* <NavLink to="/">Home</NavLink>
+         <NavLink to="/recipes">Recipes</NavLink>
+         <NavLink to="/about">About</NavLink> 
+          <NavLink to="/contact">Contact</NavLink> */}
      <Switch>
 
            <Route  path="/" exact component={Home} />
-           <Route path="/about/" exact component={About}/>
-
+           <Route path="/about" exact component={About}/>
            <Route path="/recipes" exact component={Recipes}/>
+           <Route path="/sign" exact component={Singup}/>
 
-            if(!this.state.recipes) return <div className="work">error</div>}
-                
-            return 
-              }          
-          } /> 
         </Switch>
 
      </BrowserRouter>
