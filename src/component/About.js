@@ -14,7 +14,7 @@ export default class About extends Component {
   <p >Did you Know?!<br></br>
            we don't like cooking , but we think you guys do ,<br></br>
             we are developers so we created this big beautifull recipes website for you ..<br></br>
-            don't forget to send your pictures for your meals  :) .. <br></br>
+            don't forget to send your photos for your meals  :) .. <br></br>
                we  loves that ..
                            </p> 
 

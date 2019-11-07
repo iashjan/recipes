@@ -13,7 +13,7 @@ export default class RecipesCard extends Component {
             <img src={this.props.card.image} class="card-img-top" alt="..."/>
             <div class="card-body">
             <h5 class="card-title">{this.props.card.label}</h5>
-            <p class="card-text"><strong>ingredients:</strong>{this.props.card.ingredientLines}</p>
+            <p class="card-text"><strong>Ingredients:</strong>{this.props.card.ingredientLines}</p>
             <p class="card-text"><strong>Health Labels:</strong>{this.props.card.healthLabels}</p>
             <p class="card-text"><strong>Diet Labels:</strong>{this.props.card.dietLabels}</p>
 
