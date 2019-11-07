@@ -28,28 +28,34 @@ class App extends Component {
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="recipes">Recipes</a>
-      <a class="nav-item nav-link" href="about">About</a>
-      <a class="nav-item nav-link" href="sign">Sign up</a>
+      <Link class="nav-item nav-link" to="/recipes">Recipes</Link>
+
+      <a class="nav-item nav-link" href="/about">About</a>
+      <a class="nav-item nav-link" href="/sign">Sign up</a>
 
     </div>
   </div>
 </nav>
-         {/* <NavLink to="/">Home</NavLink>
-         <NavLink to="/recipes">Recipes</NavLink>
-         <NavLink to="/about">About</NavLink> 
-          <NavLink to="/contact">Contact</NavLink> */}
+         
      <Switch>
 
            <Route  path="/" exact component={Home} />
            <Route path="/about" exact component={About}/>
-           <Route path="/recipes" exact component={Recipes}/>
+           <Route  path="/recipes" exact component={Recipes}/>
+
+           {/* <Route  path="/recipes/:id" exact component={details}/> */}
+
            <Route path="/sign" exact component={Singup}/>
 
         </Switch>
-
+        <div className="sa"> 
+            <nav class="navbar navbar-light bg-light">
+  <form class="form-inline"></form>
+     <footer >Copyright &copy; ASHJAN. </footer>
+</nav>
+</div>
      </BrowserRouter>
-
+    
       </div>
     );
 

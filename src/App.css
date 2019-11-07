@@ -4,42 +4,50 @@ body {
   
   }
   
-  img {
-    /* width: 700px;
-    height: 700px; */
-  }
-  
-  .card {
-    box-sizing: border-box;
-    padding: 60px;
-    text-align: center;
-    box-shadow: 2px   black;
-    width: calc(100%/1);
-    float: right;
-  }
   
   .clear{
     clear: both;
   }
   
-  .p{
+  p{
     font-size: 30px;
   }
 
   .sa{
-   font-size: 60px;
-   padding:70px;
-   text-align: center;
-   color: rgb(90, 88, 88);
-
+    font-size: 30px;
+    text-align: left;
+    text-align: center;
+    color: rgb(90, 88, 88);
+    justify-content: center;
+  
   }
   
 
-  .h2{
+  p{
     color: rgb(90, 88, 88);
+    font-size: 20px;
+    text-align: center;
   }
 
   .navbar{
     
     justify-content: between;
+  }
+
+  .sgin{
+    padding: 0px 50px 50px;
+  text-align: center;
+  }
+  
+  footer{
+    font-size: 10px;
+  justify-content: center;
+  padding-top: 50px;
+  }
+  .card {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    width: calc(100%/4);
+    float: left;
   }

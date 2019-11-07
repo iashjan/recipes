@@ -3,18 +3,24 @@ import React, { Component } from 'react'
 export default class Singup extends Component {
     render() {
         return (
-            <div className="sgin">
 
-<nav class="navbar navbar-light bg-light">
-  <span class="navbar-text">
-  <form>
+            <div >
+              
+                <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1auto=formatfit=cropw=631q=80" class="card-img" alt="..." />
+
+
+<div  className="sgin" class="img bg-light text-darkgrey postion-center">
+  <div class="img-img-overlay">
+    
+
+
   
     <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
+     
       <input type="email" class="form-control" id="inputEmail4" placeholder="Email" /> 
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group">
       <label for="inputPassword4">Password</label>
       <input type="password" class="form-control" id="inputPassword4" placeholder="Password" />
     </div>
@@ -42,12 +48,11 @@ export default class Singup extends Component {
   </div>
   <button type="submit" class="btn btn-primary">Sign </button>
 
-
-</form>   </span>
-</nav>
-                
-            </div>
+</div>
+</div>
+</div>
+            
         )
     }
 
-    }
+   } 

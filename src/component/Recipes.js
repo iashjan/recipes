@@ -1,39 +1,42 @@
 import React, { Component } from 'react'
 import axios from 'axios';
 
+import RecipesCard from "./RecipesCard"
+
 class Recipes extends Component {
     
 state= {
-    recipes: [],
+    recipes: []
 };
 componentDidMount() {
+
     axios
       .get(
-        "https://api.edamam.com/search?q=chicken&app_id=f7ff37c7&app_key=f8741034b92721cc3e6fad606a197d26&from=0&to=3&calories=591-722&health=alcohol-free"
+        "https://api.edamam.com/search?q=breakfast&dinner&lunch&app_id=f7ff37c7&app_key=f8741034b92721cc3e6fad606a197d26&from=0&to=100&calories=591-722&health=alcohol-free"
       )
       .then(res => {
+        console.log(res)
         this.setState({
-          data: res.data.hits
+          recipes : res.data.hits
         });
       })
       .catch(err => console.log(err));
   }
-
+  
   render() {
-    let fullData = this.state.data.map(arr => arr.recipe);
-    console.log(fullData);
-
-    let filterRes = fullData.map(index => {
-      return (
-        <div>
-          <h3>{index.label}</h3>
-          <img src={index.image} alt="" />;<p>{index.ingredientLines}</p>
-          <h3>{index.healthLabels}</h3>
-        </div>
-      );
+    console.log("i'm recipe");
+    let fullData = this.state.recipes.map(arr => {
+      return( 
+        <RecipesCard card = {arr.recipe}/>
+      )
     });
 
-    return <div>{filterRes}</div>;
+     console.log(fullData);
+
+   
+    return <div>
+    {fullData}
+    </div>;
   }
 }
 //   componentDidMount() {
